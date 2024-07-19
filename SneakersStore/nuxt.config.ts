@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@vee-validate/nuxt",
     "shadcn-nuxt",
+    "@nuxtjs/color-mode",
   ],
   shadcn: {
     /**
@@ -32,5 +33,15 @@ export default defineNuxtConfig({
       FieldArray: "VeeFieldArray",
       ErrorMessage: "VeeErrorMessage",
     },
+  },
+  colorMode: {
+    preference: "dark", // default value of $colorMode.preference
+    fallback: "dark", // fallback value if not system preference found
+    hid: "nuxt-color-mode-script",
+    globalName: "__NUXT_COLOR_MODE__",
+    componentName: "ColorScheme",
+    classPrefix: "",
+    classSuffix: "",
+    storageKey: "nuxt-color-mode",
   },
 });
